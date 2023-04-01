@@ -38,7 +38,7 @@ namespace MyApi.Controllers
                 {
                     book.Author = null;
                 }
-            }
+            } // Arreglar esto
 
             return listaAuthors;
         }

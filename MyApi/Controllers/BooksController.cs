@@ -33,7 +33,7 @@ namespace MyApi.Controllers
             _context.Book.Add(newBook);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBook", new { id = newBook.Id });
+            return CreatedAtAction("PostBook", new { id = newBook.Id });
         }
     }
 }
