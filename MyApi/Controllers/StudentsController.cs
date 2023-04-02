@@ -28,13 +28,13 @@ namespace MyApi.Controllers
 
             List<Student> listaStudents = await _context.Student.Include("courses").ToListAsync();
 
-            foreach (Student item in listaStudents)
-            {
-                foreach (Course course in item.courses)
-                {
-                    course.students = null;
-                }
-            } // Arreglar esto
+            //foreach (Student item in listaStudents)
+            //{
+            //    foreach (Course course in item.courses)
+            //    {
+            //        course.students = null;
+            //    }
+            //} // Arreglar esto
 
             return listaStudents;
         }

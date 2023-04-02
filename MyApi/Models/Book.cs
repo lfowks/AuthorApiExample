@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace MyApi.Models
+﻿namespace MyApi.Models
 {
     public class Book
     {
@@ -12,7 +9,6 @@ namespace MyApi.Models
         //Relaciones
         public int AuthorId { get; set; }
 
-        [JsonIgnore]
         public Author Author { get; set; }
     }
 }

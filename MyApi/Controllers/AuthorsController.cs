@@ -30,15 +30,15 @@ namespace MyApi.Controllers
               return NotFound();
           }
 
-            List<Author> listaAuthors = await _context.Author.Include("books").ToListAsync();
+          List<Author> listaAuthors = await _context.Author.Include("books").ToListAsync();
 
-            foreach(Author item in listaAuthors)
-            {
-                foreach (Book book in item.books)
-                {
-                    book.Author = null;
-                }
-            } // Arreglar esto
+            //foreach(Author item in listaAuthors)
+            //{
+            //    foreach (Book book in item.books)
+            //    {
+            //        book.Author = null;
+            //    }
+            //} // Arreglar esto
 
             return listaAuthors;
         }
